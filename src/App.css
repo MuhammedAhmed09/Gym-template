@@ -1,38 +1,235 @@
-.App {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: #333333;
+}
+
+/* Home */
+.home {
+  background: url(./Images/bg-home.jpg) no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+}
+
+.header .brand {
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: 25px;
+  color: #fff;
+}
+
+.header .brand:hover {
+  color: #fff;
+}
+
+.header .brand span {
+  color: #EC3642;
+}
+
+.header .link {
+  text-decoration: none;
+  margin-left: 25px;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.title-home {
+  margin-top: 20vh;
+}
+
+.title-home .head-paragraph {
+  font-size: 50px;
+  font-weight: 500;
+  color: #ffff;
+  text-transform: capitalize;
+}
+
+.title-home .second-head-paragraph {
+  font-size: 35px;
+  color: #ffff;
+  text-transform: uppercase;
+}
+
+.title-home .second-head-paragraph span {
+  color: #EC3642;
+}
+
+.title-home h6 {
+  color: #ffff;
+}
+
+.title-home .links {
+  margin-top: 30px;
+  display: flex;
+}
+
+.title-home .links .btn-pricing {
+  background-color: #EC3642;
+  border: none;
+  color: #ffff;
+  padding: 8px 20px 10px;
+  font-size: 19px;
+  font-weight: 600;
+  border-radius: 4px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.title-home .links .btn-services {
+  background-color: #03030300;
+  border: 1px #EC3642 solid;
+  color: #ffff;
+  padding: 8px 20px 10px;
+  font-size: 19px;
+  font-weight: 600;
+  border-radius: 4px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: 0.5s;
+  margin: 0 15px;
+}
+
+/* about */
+.about {
+  padding: 10vh 0; 
+  background-color: #101010;
+  color: #ffff;
+}
+
+.about img {
+  width: 100%;
+  border-radius: 4px;
+}
+
+.about h4 {
+  text-transform: capitalize;
+}
+
+.about span {
+  color: #EC3642;
+}
+
+.about .line1 {
+  height: 2px;
+  width: 100px;
+  background: #EC3642;
+  display: inline-block;
+  margin-top: 15px;
+}
+
+.about h6 {
+  margin-bottom: 30px;
+}
+
+.about .btn-contact {
+  background-color: #EC3642;
+  border: none;
+  color: #ffff;
+  padding: 8px 20px 10px;
+  font-size: 19px;
+  font-weight: 600;
+  border-radius: 4px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+/* trainers */
+
+.trainers {
+  padding-top: 20vh; 
+  background-color: #101010;
+  color: #ffff;
+}
+
+.trainers h3 {
+  text-align: center;
+  text-transform: capitalize;
+  font-weight: 700;
+}
+
+.line {
+  height: 2px;
+  width: 70px;
+  background: #EC3642;
+  margin: 20px auto;
+}
+
+.trainers img {
+  margin: 60px 40px 80px 0;
+  width: 100%;
+}
+
+/* services */
+
+.services {
+  padding-top: 20vh;
+  background-color: #161616;
+  color: #ffff;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.services h3 {
+  text-align: center;
+  text-transform: capitalize;
+  font-weight: 700;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.services p {
+  text-align: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.services h5 {
+  text-align: center;
+  text-transform: uppercase;
+  margin: 20px 0;
+  font-weight: 600;
 }
 
-.App-link {
-  color: #61dafb;
+.services h6 {
+  text-align: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.services button {
+  background-color: #03030300;
+  border: 1px #EC3642 solid;
+  color: #ffff;
+  padding: 5px 20px 8px;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 2px;
+  text-transform: capitalize;
+  text-decoration: none;
+  cursor: pointer;
+  display: inline-block;
+  margin: 20px auto 40px;
+}
+
+.services button:hover {
+  background-color: #EC3642;
+}
+
+.services .paragraph-icon {
+  font-size: 25px;
+  margin: 20px 0;
+  border: #EC3642 1px solid;
+  border-radius: 50%;
+  padding: 8px 14px 10px;
+  width: min-content;
+  position: relative;
+  display: inline-block;
+}
+
+.services .paragraph-icon:hover {
+  background-color: #EC3642;
 }
