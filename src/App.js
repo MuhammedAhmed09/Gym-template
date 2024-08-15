@@ -6,6 +6,12 @@ import { Link } from 'react-scroll';
 import { GiBodyBalance } from "react-icons/gi";
 import { GiSprint } from "react-icons/gi";
 import { GiBiceps } from "react-icons/gi";
+import { FaQuoteLeft } from "react-icons/fa";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/free-mode';
+import 'swiper/css/pagination';
+import { FreeMode, Pagination } from 'swiper/modules';
 
 
 
@@ -129,13 +135,150 @@ function App() {
 
     {/* Testimonial Component */
       <Element name='Testimonial'>
-          <h2>Testimonial</h2>
+        <Nav className='testimonial'>
+          <Container>
+            <h3>Customer Says</h3>
+            <p className='line'></p>
+            <Row>
+            <Swiper
+              slidesPerView={3}
+              spaceBetween={30}
+              freeMode={true}
+              pagination={{
+                clickable: true,
+              }}
+              modules={[FreeMode, Pagination]}
+              className="mySwiper"
+            >
+              <SwiperSlide>
+                <div className='swiper-slide'>
+                  <p className='paragraph-icon-customer'><FaQuoteLeft/></p>
+                  <p> I have got World class service from this particuler gym. I have tried three of them before but this one is the best. All trainers are very friendly and helpful. I will recommend this gym to everyone.</p>
+                  <Row>
+                  <Col md={8} xs={8}>
+                    <h4>John Doe</h4>
+                    <p className='paragraph-customer-work'>Architect</p>
+                  </Col>
+                  <Col md={4} xs={4}>
+                    <img src={require("./Images/testi1.jpg")} alt='Imagee customer' />
+                  </Col>
+                  </Row>
+                </div>
+                </SwiperSlide>
+              <SwiperSlide>
+                <div className='swiper-slide'>
+                  <p className='paragraph-icon-customer'><FaQuoteLeft/></p>
+                  <p> I have got World class service from this particuler gym. I have tried three of them before but this one is the best. All trainers are very friendly and helpful. I will recommend this gym to everyone.</p>
+                  <Row>
+                  <Col md={8} xs={8}>
+                    <h4>Lucy coe</h4>
+                    <p className='paragraph-customer-work'>Singer</p>
+                  </Col>
+                  <Col md={4} xs={4}>
+                    <img src={require("./Images/testi2.jpg")} alt='Imagee customer' />
+                  </Col>
+                  </Row>
+                </div>
+                </SwiperSlide>
+              <SwiperSlide>
+                <div className='swiper-slide'>
+                  <p className='paragraph-icon-customer'><FaQuoteLeft/></p>
+                  <p> I have got World class service from this particuler gym. I have tried three of them before but this one is the best. All trainers are very friendly and helpful. I will recommend this gym to everyone.</p>
+                  <Row>
+                  <Col md={8} xs={8}>
+                    <h4>Daniel Kelly</h4>
+                    <p className='paragraph-customer-work'>Model</p>
+                  </Col>
+                  <Col md={4} xs={4}>
+                    <img src={require("./Images/testi3.jpg")} alt='Imagee customer' />
+                  </Col>
+                  </Row>
+                </div>
+                </SwiperSlide>
+              <SwiperSlide>
+                <div className='swiper-slide'>
+                  <p className='paragraph-icon-customer'><FaQuoteLeft/></p>
+                  <p> I have got World class service from this particuler gym. I have tried three of them before but this one is the best. All trainers are very friendly and helpful. I will recommend this gym to everyone.</p>
+                  <Row>
+                  <Col md={8} xs={8}>
+                    <h4>Frnk James</h4>
+                    <p className='paragraph-customer-work'>Student</p>
+                  </Col>
+                  <Col md={4} xs={4}>
+                    <img src={require("./Images/testi4.jpg")} alt='Imagee customer' />
+                  </Col>
+                  </Row>
+                </div>
+                </SwiperSlide>
+            </Swiper>
+            </Row>
+          </Container>
+        </Nav>
       </Element>
     }
 
     {/* Pricing Component */
       <Element name='Pricing'>
-          <h2>Pricing</h2>
+        <Nav className='pricing'>
+          <Container>
+            <h3>Our Pricing</h3>
+            <p className='line'></p>
+            <Row>
+              <Col lg={4} xs={12}>
+              <div className='col-price'>
+                <h5>PERSONAL</h5>
+                <p className='line'></p>
+                <p className='paragraph-price'>$ <span>49</span><sub>/mo</sub></p>
+                <p className='paragraph-details'>4 Days a week</p>
+                <hr></hr>
+                <p className='paragraph-details'>No Dedicated Trainer</p>
+                <hr></hr>
+                <p className='paragraph-details'>No Diet Plan</p>
+                <hr></hr>
+                <p className='paragraph-details'>Morning Batch only</p>
+                <hr></hr>
+                <p className='paragraph-details'>No Yoga Classes</p>
+                <button className='btn-buy'>enroll now</button>
+              </div>
+              </Col>
+              <Col lg={4} xs={12}>
+              <div className='col-price-2'>
+                <h5>ENTERRRISE</h5>
+                <p className='line-2'></p>
+                <p className='paragraph-price'>$ <span>79</span><sub>/mo</sub></p>
+                <p className='paragraph-details'>5 Days a week</p>
+                <hr></hr>
+                <p className='paragraph-details'>Dedicated Trainer</p>
+                <hr></hr>
+                <p className='paragraph-details'>Diet Plan included</p>
+                <hr></hr>
+                <p className='paragraph-details'>Morning & evening Batch</p>
+                <hr></hr>
+                <p className='paragraph-details'>No Yoga Classes</p>
+                <button className='btn-buy-2'>enroll now</button>
+              </div>
+              </Col>
+              <Col lg={4} xs={12} >
+              <div className='col-price'>
+                <h5>PROFFESIONAL</h5>
+                <p className='line'></p>
+                <p className='paragraph-price'>$ <span>99</span><sub>/mo</sub></p>
+                <p className='paragraph-details'>6 Days a week</p>
+                <hr></hr>
+                <p className='paragraph-details'>Dedicated Trainer</p>
+                <hr></hr>
+                <p className='paragraph-details'>Diet Plan included</p>
+                <hr></hr>
+                <p className='paragraph-details'>Morning & evening Batch</p>
+                <hr></hr>
+                <p className='paragraph-details'>Yoga Classes</p>
+                <button className='btn-buy'>enroll now</button>
+              </div>
+              </Col>
+            </Row>
+
+          </Container>
+        </Nav>
       </Element>
     }
 

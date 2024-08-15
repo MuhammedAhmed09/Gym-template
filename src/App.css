@@ -28,7 +28,7 @@ body {
 }
 
 .header .brand span {
-  color: #EC3642;
+  color: #ec3642;
 }
 
 .header .link {
@@ -60,7 +60,7 @@ body {
 }
 
 .title-home .second-head-paragraph span {
-  color: #EC3642;
+  color: #ec3642;
 }
 
 .title-home h6 {
@@ -73,7 +73,7 @@ body {
 }
 
 .title-home .links .btn-pricing {
-  background-color: #EC3642;
+  background-color: #ec3642;
   border: none;
   color: #ffff;
   padding: 8px 20px 10px;
@@ -87,7 +87,7 @@ body {
 
 .title-home .links .btn-services {
   background-color: #03030300;
-  border: 1px #EC3642 solid;
+  border: 1px #ec3642 solid;
   color: #ffff;
   padding: 8px 20px 10px;
   font-size: 19px;
@@ -101,7 +101,7 @@ body {
 
 /* about */
 .about {
-  padding: 10vh 0; 
+  padding: 10vh 0;
   background-color: #101010;
   color: #ffff;
 }
@@ -116,13 +116,13 @@ body {
 }
 
 .about span {
-  color: #EC3642;
+  color: #ec3642;
 }
 
 .about .line1 {
   height: 2px;
   width: 100px;
-  background: #EC3642;
+  background: #ec3642;
   display: inline-block;
   margin-top: 15px;
 }
@@ -132,7 +132,7 @@ body {
 }
 
 .about .btn-contact {
-  background-color: #EC3642;
+  background-color: #ec3642;
   border: none;
   color: #ffff;
   padding: 8px 20px 10px;
@@ -147,7 +147,7 @@ body {
 /* trainers */
 
 .trainers {
-  padding-top: 20vh; 
+  padding-top: 20vh;
   background-color: #101010;
   color: #ffff;
 }
@@ -161,7 +161,7 @@ body {
 .line {
   height: 2px;
   width: 70px;
-  background: #EC3642;
+  background: #ec3642;
   margin: 20px auto;
 }
 
@@ -202,7 +202,7 @@ body {
 
 .services button {
   background-color: #03030300;
-  border: 1px #EC3642 solid;
+  border: 1px #ec3642 solid;
   color: #ffff;
   padding: 5px 20px 8px;
   font-size: 14px;
@@ -216,13 +216,13 @@ body {
 }
 
 .services button:hover {
-  background-color: #EC3642;
+  background-color: #ec3642;
 }
 
 .services .paragraph-icon {
   font-size: 25px;
   margin: 20px 0;
-  border: #EC3642 1px solid;
+  border: #ec3642 1px solid;
   border-radius: 50%;
   padding: 8px 14px 10px;
   width: min-content;
@@ -231,5 +231,120 @@ body {
 }
 
 .services .paragraph-icon:hover {
-  background-color: #EC3642;
+  background-color: #ec3642;
+}
+
+/* testimonial */
+
+.testimonial {
+  background-image: url(./Images//bg-customer.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #ffff;
+  padding: 100px 0;
+}
+
+.testimonial h3 {
+  text-align: center;
+  font-weight: 700;
+}
+
+.testimonial .swiper-slide {
+  background-color: #333333;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: none;
+  margin-top: 30px;
+}
+
+.testimonial .paragraph-icon-customer {
+  color: #ec3642;
+  font-size: 25px;
+}
+
+.testimonial .paragraph-customer-work {
+  color: #ec3642;
+}
+
+.testimonial .swiper-slide img {
+  width: 80%;
+  height: 90%;
+  border-radius: 100%;
+}
+
+/* pricing */
+
+.pricing {
+  color: #fff;
+  padding: 100px 0;
+  text-align: center;
+  padding: 40px 30px;
+  background-color: #101010;
+}
+
+.pricing .col-price {
+  border: 2px solid #333333;
+  padding: 45px;
+  background-color: #101010;
+  margin: 20px 15px;
+  width: 100%;
+}
+
+.pricing h5 {
+  font-weight: 650;
+}
+
+.pricing .paragraph-price {
+  font-weight: 600;
+  font-size: 22px;
+}
+
+.pricing .paragraph-price span {
+  font-weight: 650;
+  font-size: 35px;
+  margin: 0 10px 0 0;
+}
+
+.pricing .paragraph-details {
+  font-weight: 600;
+  margin: 10px 0;
+}
+
+.pricing .btn-buy {
+  background-color: #101010;
+  color: #fff;
+  border: 2px solid #ec3642;
+  padding: 8px 30px;
+  text-transform: capitalize;
+  font-weight: 600;
+  margin: 25px 0 0 0;
+}
+
+.pricing .btn-buy:hover {
+  background-color: #ec3642;
+}
+
+.pricing .col-price-2 {
+  border: 2px solid #ec3642;
+  padding: 45px;
+  background-color: #ec3642;
+  margin: 20px 15px;
+  width: 100%;
+}
+
+.pricing .btn-buy-2 {
+  background-color: #ec3642;
+  color: #fff;
+  border: 2px solid #fff;
+  padding: 8px 30px;
+  text-transform: capitalize;
+  font-weight: 600;
+  margin: 25px 0 0 0;
+}
+
+.pricing .line-2 {
+  margin: 20px auto;
+  width: 30%;
+  height: 2px;
+  background-color: #fff;
 }
