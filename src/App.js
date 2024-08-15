@@ -7,6 +7,10 @@ import { GiBodyBalance } from "react-icons/gi";
 import { GiSprint } from "react-icons/gi";
 import { GiBiceps } from "react-icons/gi";
 import { FaQuoteLeft } from "react-icons/fa";
+import { FaTwitter } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa6";
+import { FaLinkedinIn } from "react-icons/fa6";
+import { FaFacebookF } from "react-icons/fa6";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/free-mode';
@@ -284,15 +288,146 @@ function App() {
 
     {/* Blog Component */
       <Element name='Blog'>
-          <h2>Blog</h2>
+        <Nav className='blog'> 
+          <Container>
+            <h3>our Blog</h3>
+            <p className='line'></p>
+            <Row>
+              <Col lg={4} xs={12}>
+              <div className='blog-box'>
+                <img src={require('./Images/blog1.jpg')} alt='blog1' />
+                <p className='paraghraph-title'>keep your body fit</p>
+                <p className='line-blog'></p>
+                <p className='paragraph-date'><span>GetFit Gym</span> - 1st Mar,2021</p>
+                <p className='paragraph-details'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer</p>
+                <button className='btn-read-more'>continue reading</button>
+              </div>
+              </Col>
+              <Col lg={4} xs={12}>
+              <div className='blog-box'>
+                <img src={require('./Images/blog2.jpg')} alt='blog1' />
+                <p className='paraghraph-title'>Healthy Life Happy Life</p>
+                <p className='line-blog'></p>
+                <p className='paragraph-date'><span>GetFit Gym</span> - 17 Apr, 2021</p>
+                <p className='paragraph-details'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer</p>
+                <button className='btn-read-more'>continue reading</button>
+              </div>
+              </Col>
+              <Col lg={4} xs={12}>
+              <div className='blog-box'>
+                <img src={require('./Images/blog3.jpg')} alt='blog1' />
+                <p className='paraghraph-title'>Top reasons to be healthy</p>
+                <p className='line-blog'></p>
+                <p className='paragraph-date'><span>GetFit Gym</span> - 28 May, 2021</p>
+                <p className='paragraph-details'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer</p>
+                <button className='btn-read-more'>continue reading</button>
+              </div>
+              </Col>
+            </Row>
+          </Container>
+        </Nav>
       </Element>
     }
 
     {/* Contact Component */
       <Element name='Contact'>
-          <h2>Contact</h2>
+          <Nav className='contact'>
+            <Container>
+              <h3>Get in Touch</h3>
+              <p className='line'></p>
+              <Row>
+                <Col lg={6} xs={12}>
+                <div>
+                  <div className='text-box-contact'>
+                    <p>opening hours:</p>
+                    <h6>Monday - Friday: 8:00 am - 6:00 pm</h6>
+                  </div>
+                  <div className='text-box-contact'>
+                    <p>address:</p>
+                    <h6>21, See Road, Abo Homoss, El-Beheara</h6>
+                  </div>
+                  <div className='text-box-contact'>
+                    <p>phone:</p>
+                    <h6>00000000000</h6>
+                  </div>
+                  <div className='text-box-contact'>
+                    <p>fax:</p>
+                    <h6>00000000000</h6>
+                  </div>
+                  <div className='text-box-contact'>
+                    <p>email:</p>
+                    <h6>info@getfitgym.com</h6>
+                  </div>
+                </div>
+                </Col>
+                <Col>
+                <div className='form-contact'>
+                  <Row>
+                    <Col md={6} xs={12}>
+                      <input className='has-danger has-error' type='text' required placeholder='Enter your full name*'/>
+                    </Col>
+                    <Col md={6} xs={12}>
+                      <input type='text' required placeholder='Enter your email*'/>
+                    </Col>
+                  </Row>
+                  <div>
+                    <textarea placeholder='Your Reply*'/>
+                  </div>
+                  <button className='btn-send'>submit comment</button>
+                </div>
+                </Col>
+              </Row>
+            </Container>
+          </Nav>
       </Element>
     }
+
+    <Nav className='footer'>
+      <Container>
+        <Row>
+          <Col lg={4} xs={12}>
+            <h4>get<span>fit</span></h4>
+            <p className='line-footer'></p>
+            <p>Get Fit Gym is a fitness center that provides a variety of services to help you. Vitae nostrum omnis aspernatur itaque eius totam. </p>
+            <h6>follow us</h6>
+            <div className='social'>
+              <button className='btn-social'><p><FaFacebookF/></p></button>
+              <button className='btn-social'><p><FaTwitter/></p></button>
+              <button className='btn-social'><p><FaLinkedinIn/></p></button>
+              <button className='btn-social'><p><FaInstagram/></p></button>
+            </div>
+          </Col>
+          <Col lg={4} xs={12}>
+            <h4>quick links</h4>
+            <p className='line-footer'></p>
+            <p className='ul'>
+              <p>branches</p>
+              <p>career</p>
+              <p>reviews</p>
+              <p>features</p>
+              <p>trainers</p>
+            </p>
+          </Col>
+          <Col lg={4} xs={12}>
+            <h4>recent post</h4>
+            <p className='line-footer'></p>
+            <p className='ul'>
+              <p>Lorem ipsum dolor.</p>
+              <p>Lorem ipsum dolor.</p>
+              <p>Lorem ipsum dolor.</p>
+              <p>Lorem ipsum dolor.</p>
+              <p>Lorem ipsum dolor.</p>
+            </p>
+          </Col>
+        </Row>
+      </Container>
+    </Nav>
+
+    <Nav className='copy-right'>
+      <Container>
+        <p>Copyright  © 2021.  All Rights Reserved </p>
+      </Container>
+    </Nav>
     </>
   );
 }
