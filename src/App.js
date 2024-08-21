@@ -1,7 +1,7 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Element } from 'react-scroll';
-import { Col, Container, Nav, Navbar, Row } from 'react-bootstrap';
+import { Col, Container, Nav, Navbar,Row } from 'react-bootstrap';
 import { Link } from 'react-scroll';
 import { GiBodyBalance } from "react-icons/gi";
 import { GiSprint } from "react-icons/gi";
@@ -20,19 +20,39 @@ import { FreeMode, Pagination } from 'swiper/modules';
 
 
 function App() {
+
+  let sections = document.querySelectorAll('section');
+  let navLinks = document.querySelectorAll('Nav a');
+
+  window.onscroll = () => {
+    sections.forEach((sec) => {
+      let top = window.scrollY;
+      let offset = sec.offsetTop -150;
+      let height = sec.offsetHeight;
+      let id = sec.getAttribute('id');
+      if(top >= offset && top < height + offset){
+        navLinks.forEach((link) => {
+          link.classList.remove('active');
+        })
+        document.querySelector(`Nav a[to="${id}"]`).classList.add('active');
+      }
+    })
+  }
+
+
   return (
     <>
 
     {/* Home Component */
     <Element name='/'>
-    <div className='home'>
+      <div className='home'>
       <Navbar expand="lg" className='header'>
-      <Container>
+        <Container>
           <Navbar.Brand className='brand'>get<span>fit</span></Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="ms-auto">
-              <Link className='link' to="/" smooth={true} duration={100}>home</Link>
+            <Nav className="ms-auto">
+              <Link className='link active' to="/" smooth={true} duration={100}>home</Link>
               <Link className='link' to="About" smooth={true} duration={100}>about</Link>
               <Link className='link' to="Trainers" smooth={true} duration={100}>trainers</Link>
               <Link className='link' to="Services" smooth={true} duration={100}>services</Link>
@@ -40,11 +60,12 @@ function App() {
               <Link className='link' to="Pricing" smooth={true} duration={100}>pricing</Link>
               <Link className='link' to="Blog" smooth={true} duration={100}>blog</Link>
               <Link className='link' to="Contact" smooth={true} duration={100}>contact</Link>
-          </Nav>
+            </Nav>
           </Navbar.Collapse>
-      </Container>
+        </Container>
       </Navbar>
 
+      <section id='Home'> 
         <Container className='title-home'>
           <Col lg={6} >
             <p className='head-paragraph'>getFit gym</p>
@@ -56,12 +77,14 @@ function App() {
             </div>
           </Col>
         </Container>
+      </section>
       </div>
       </Element>
     }
 
     {/* About Component */
       <Element name='About'>
+        <section id='About'>
           <Nav className='about'>
             <Container>
               <Row>
@@ -78,11 +101,13 @@ function App() {
               </Row>
             </Container>
           </Nav>
+        </section>
       </Element>
     }
 
     {/* Trainers Component */
       <Element name='Trainers'>
+        <section id='Trainers'>
         <Nav className='trainers'>
           <Container>
             <h3>our trainers</h3>
@@ -90,24 +115,30 @@ function App() {
             <Row>
               <Col lg={3} md={6} sm={12}>
                 <img src={require("./Images/traniner1.jpg")} alt='img for traininer1'/>
+                
               </Col>
               <Col lg={3} md={6} sm={12}>
                 <img src={require("./Images/trainer2.jpg")} alt='img for traininer2'/>
+                
               </Col>
               <Col lg={3} md={6}  sm={12}>
                 <img src={require("./Images/trainer3.jpg")} alt='img for traininer3'/>
+                
               </Col>
               <Col lg={3} md={6} sm={12}>
                 <img src={require("./Images/trainer4.jpg")} alt='img for traininer4'/>
+                
               </Col>
             </Row>
           </Container>
         </Nav>
+      </section>
       </Element>
     }
 
     {/* Services Component */
       <Element name='Services'>
+        <section id='Services'>
         <Nav className='services'>
           <Container>
           <h3>out services</h3>
@@ -134,11 +165,13 @@ function App() {
             </Row>
           </Container>
           </Nav>
+          </section>
       </Element>
     }
 
     {/* Testimonial Component */
       <Element name='Testimonial'>
+        <section id='Testimonial'>
         <Nav className='testimonial'>
           <Container>
             <h3>Customer Says</h3>
@@ -154,6 +187,7 @@ function App() {
               modules={[FreeMode, Pagination]}
               className="mySwiper"
             >
+              <Col md={4} xs={12}>
               <SwiperSlide>
                 <div className='swiper-slide'>
                   <p className='paragraph-icon-customer'><FaQuoteLeft/></p>
@@ -169,7 +203,9 @@ function App() {
                   </Row>
                 </div>
                 </SwiperSlide>
-              <SwiperSlide>
+                </Col>
+                <Col md={4} lg={12}>
+                <SwiperSlide>
                 <div className='swiper-slide'>
                   <p className='paragraph-icon-customer'><FaQuoteLeft/></p>
                   <p> I have got World class service from this particuler gym. I have tried three of them before but this one is the best. All trainers are very friendly and helpful. I will recommend this gym to everyone.</p>
@@ -184,45 +220,52 @@ function App() {
                   </Row>
                 </div>
                 </SwiperSlide>
-              <SwiperSlide>
-                <div className='swiper-slide'>
-                  <p className='paragraph-icon-customer'><FaQuoteLeft/></p>
-                  <p> I have got World class service from this particuler gym. I have tried three of them before but this one is the best. All trainers are very friendly and helpful. I will recommend this gym to everyone.</p>
-                  <Row>
-                  <Col md={8} xs={8}>
-                    <h4>Daniel Kelly</h4>
-                    <p className='paragraph-customer-work'>Model</p>
-                  </Col>
-                  <Col md={4} xs={4}>
-                    <img src={require("./Images/testi3.jpg")} alt='Imagee customer' />
-                  </Col>
-                  </Row>
-                </div>
+                </Col>
+                <Col md={4} xs={12}>
+                <SwiperSlide>
+                  <div className='swiper-slide'>
+                    <p className='paragraph-icon-customer'><FaQuoteLeft/></p>
+                    <p> I have got World class service from this particuler gym. I have tried three of them before but this one is the best. All trainers are very friendly and helpful. I will recommend this gym to everyone.</p>
+                    <Row>
+                    <Col md={8} xs={8}>
+                      <h4>Daniel Kelly</h4>
+                      <p className='paragraph-customer-work'>Model</p>
+                    </Col>
+                    <Col md={4} xs={4}>
+                      <img src={require("./Images/testi3.jpg")} alt='Imagee customer' />
+                    </Col>
+                    </Row>
+                  </div>
                 </SwiperSlide>
-              <SwiperSlide>
-                <div className='swiper-slide'>
-                  <p className='paragraph-icon-customer'><FaQuoteLeft/></p>
-                  <p> I have got World class service from this particuler gym. I have tried three of them before but this one is the best. All trainers are very friendly and helpful. I will recommend this gym to everyone.</p>
-                  <Row>
-                  <Col md={8} xs={8}>
-                    <h4>Frnk James</h4>
-                    <p className='paragraph-customer-work'>Student</p>
-                  </Col>
-                  <Col md={4} xs={4}>
-                    <img src={require("./Images/testi4.jpg")} alt='Imagee customer' />
-                  </Col>
-                  </Row>
-                </div>
+                </Col>
+                <Col md={4} xs={12}>
+                <SwiperSlide>
+                  <div className='swiper-slide'>
+                    <p className='paragraph-icon-customer'><FaQuoteLeft/></p>
+                    <p> I have got World class service from this particuler gym. I have tried three of them before but this one is the best. All trainers are very friendly and helpful. I will recommend this gym to everyone.</p>
+                    <Row>
+                    <Col md={8} xs={8}>
+                      <h4>Frnk James</h4>
+                      <p className='paragraph-customer-work'>Student</p>
+                    </Col>
+                    <Col md={4} xs={4}>
+                      <img src={require("./Images/testi4.jpg")} alt='Imagee customer' />
+                    </Col>
+                    </Row>
+                  </div>
                 </SwiperSlide>
+                </Col>
             </Swiper>
             </Row>
           </Container>
         </Nav>
+        </section>
       </Element>
     }
 
     {/* Pricing Component */
       <Element name='Pricing'>
+        <section id='Pricing'>
         <Nav className='pricing'>
           <Container>
             <h3>Our Pricing</h3>
@@ -280,14 +323,15 @@ function App() {
               </div>
               </Col>
             </Row>
-
           </Container>
         </Nav>
+        </section>
       </Element>
     }
 
     {/* Blog Component */
       <Element name='Blog'>
+        <section id='Blog'>
         <Nav className='blog'> 
           <Container>
             <h3>our Blog</h3>
@@ -326,11 +370,13 @@ function App() {
             </Row>
           </Container>
         </Nav>
+        </section>
       </Element>
     }
 
     {/* Contact Component */
       <Element name='Contact'>
+        <section id='Contact'>
           <Nav className='contact'>
             <Container>
               <h3>Get in Touch</h3>
@@ -379,6 +425,7 @@ function App() {
               </Row>
             </Container>
           </Nav>
+          </section>
       </Element>
     }
 

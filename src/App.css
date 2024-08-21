@@ -10,9 +10,9 @@ body {
 
 /* Home */
 .home {
-  background: url(./Images/bg-home.jpg) no-repeat;
-  background-size: cover;
   width: 100%;
+  background-image: url(./Images/bg-home.jpg);
+  background-size: cover;
   height: 100vh;
 }
 
@@ -42,8 +42,10 @@ body {
   transition: 0.5s;
 }
 
+
 .title-home {
   margin-top: 20vh;
+  position: relative;
 }
 
 .title-home .head-paragraph {
@@ -168,6 +170,11 @@ body {
 .trainers img {
   margin: 60px 40px 80px 0;
   width: 100%;
+  transition: .7s;
+}
+
+.trainers img:hover {
+  opacity: .3;
 }
 
 /* services */
