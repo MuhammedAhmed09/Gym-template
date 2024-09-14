@@ -23,6 +23,23 @@ function App() {
 
   let sections = document.querySelectorAll('section');
   let navLinks = document.querySelectorAll('Nav a');
+  // let fitness = document.getElementById('fitness');
+  // let body = document.getElementById('body');
+
+setInterval(function() {
+  setTimeout(noneFitness, 3000);
+function noneFitness() {
+  document.getElementById('fitness').style.display = 'none';
+  document.getElementById('body').style.display = 'inline';
+}
+setTimeout(noneBody, 6000);
+function noneBody() {
+  document.getElementById('body').style.display = 'none';
+  document.getElementById('fitness').style.display = 'inline';
+}
+},9000)
+
+
 
   window.onscroll = () => {
     sections.forEach((sec) => {
@@ -69,7 +86,7 @@ function App() {
         <Container className='title-home'>
           <Col lg={6} >
             <p className='head-paragraph'>getFit gym</p>
-            <p className='second-head-paragraph'>transform your <span>body</span></p>
+            <p className='second-head-paragraph'>transform your <span id='body'style={{display : 'none'}}>body</span> <span id='fitness'>fitness</span></p>
             <h6>We are the best in the town in terms of service so far. Give us a try</h6>
             <div className='links'>
             <button to="Pricing" smooth={true} duration={100} className='btn-pricing'>get started</button>
